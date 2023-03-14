@@ -1,4 +1,4 @@
-.agrupamento-botoes button:hover{
+.control-buttons button:hover{
     font-size: 1.01em;
     opacity: 0.9;
    /* background-color: rgba(10, 56, 113, 0.9);*/
@@ -10,4 +10,9 @@
     opacity: 0.9;
    /* background-color: rgba(10, 56, 113, 0.9);*/
     transition: 1s;
+}
+
+body::after{
+    background-image: url(backgroundpt.png);
+    opacity: 0.5;
 }

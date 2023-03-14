@@ -1,64 +1,64 @@
 window.onload = carregarElementos;
 
-var letrasEquivalentes = ["e", "i", "a", "o", "u"];
-var palavrasEquivalentes = ["enter", "imes", "ai", "ober", "ufat"];
+var equivalentLetters = ["e", "i", "a", "o", "u"];
+var equivalentWords = ["enter", "imes", "ai", "ober", "ufat"];
 var i = 0;
 
 function carregarElementos(){
-    var criptografarButton = document.getElementById("criptografar");
-    var descriptografarButton = document.getElementById("descriptografar");
-    criptografarButton.onclick = criptografar;
-    descriptografarButton.onclick = descriptografar;
+    var encodeButton = document.getElementById("encode");
+    var decodeButton = document.getElementById("decode");
+    encodeButton.onclick = encode;
+    decodeButton.onclick = decode;
 
-    botaoLimpar = document.getElementById("button-limpar");
-    botaoLimpar.onclick = limpar;   
+    eraseButton = document.getElementById("erase-button");
+    eraseButton.onclick = erase;   
     
-    input = document.getElementById("campoTexto");
-    historicoCampoTexto = document.getElementById("campoTextoLateral");
-    historicoVazio = document.getElementById("historico-vazio");  
+    mainTextArea = document.getElementById("mainsection-textarea");
+    historyTextArea = document.getElementById("side-textarea");
+    historyEmptyMessage = document.getElementById("side-content");  
 }
 
-function criptografar(){
+function encode(){
     var j = 0;
-    for(var i = 0; i < letrasEquivalentes.length; i++){
-        if(input.value.toLowerCase().includes(letrasEquivalentes[i])){
-            input.value = input.value.toLowerCase().replaceAll(letrasEquivalentes[i], palavrasEquivalentes[i]);
+    for(var i = 0; i < equivalentLetters.length; i++){
+        if(mainTextArea.value.toLowerCase().includes(equivalentLetters[i])){
+            mainTextArea.value = mainTextArea.value.toLowerCase().replaceAll(equivalentLetters[i], equivalentWords[i]);
             var j = 1;
         }
     }
     if(j == 1){
-        escreve("(C)");
-        conteudoDivLateral();
+        writeCryptType("(C)");
+        historyMessageEraser();
         j = 0;
     }
 }
 
-function descriptografar(){
+function decode(){
     var j = 0;
-    for(var i = 0; i < palavrasEquivalentes.length; i++){
-        if(input.value.toLowerCase().includes(palavrasEquivalentes[i])){
-            input.value = input.value.toLowerCase().replaceAll(palavrasEquivalentes[i], letrasEquivalentes[i]);
+    for(var i = 0; i < equivalentWords.length; i++){
+        if(mainTextArea.value.toLowerCase().includes(equivalentWords[i])){
+            mainTextArea.value = mainTextArea.value.toLowerCase().replaceAll(equivalentWords[i], equivalentLetters[i]);
             j = 1;
         }
     }
     if(j == 1){
-        escreve("(D)");
-        conteudoDivLateral();
+        writeCryptType("(D)");
+        historyMessageEraser();
         j = 0;
     }
 }
 
-function escreve(tipoCriptografia){
-    historicoCampoTexto.value += (input.value + " " + tipoCriptografia + "\n" );
+function writeCryptType(cryptType){
+    historyTextArea.value += (mainTextArea.value + " " + cryptType + "\n" );
 }
 
-function limpar(){
-    historicoCampoTexto.value = "";
+function erase(){
+    historyTextArea.value = "";
 }
 
-function conteudoDivLateral(){
+function historyMessageEraser(){
     if(i == 0){
-        historicoVazio.parentNode.removeChild(historicoVazio);
+        historyEmptyMessage.parentNode.removeChild(historyEmptyMessage);
         i++;
     }
 }

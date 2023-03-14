@@ -4,19 +4,23 @@ body{
 }
 
 header{
+    display: flex;
     background-color: #0A3871;
     height: 2.5em;
+    width: 100%;
+    position: fixed;
+    top: 0;
 }
 
 main{
     width: 940px;
-    margin: 20px auto;
+    margin: 5rem auto;
 }
 
-.centralizar{
+.centralize{
     display: flex;
-    position: relative;
     margin: 30px;
+    justify-content: space-between;
 }
 
 textarea{
@@ -29,86 +33,76 @@ textarea{
     text-transform: lowercase;
 }
 
-.agrupamento-botoes{
+.main-section div{
     margin-top: 20px;
 }
 
-.agrupamento-botoes svg {
+.main-section div svg {
     height: 1.2em;
     width: 1.2em;
     position: relative;
     top: .20em;
 }
 
-.texto-aviso{
+.main-section div p{
     font-size: 12px;
    
 }
 
-.agrupamento-botoes button{
+.button{
     border: 1px solid;
     border-radius: 25px;
-    padding: 12px;
+    padding: 0.75em;
     width: 200px;
     font-size: 16px;
     margin-right: 24px;
     margin-top: 5px;
 }
 
-.buttoncriptografar{
-    background-color: #0A3871;
+#encode{
+    background-color: #355A88;
     color: #FFFFFF
 }
 
-.buttondescriptografar{
+#decode{
     background-color: #D8DFE8;
-    color: #0A3871;
+    color: #115EBD;
 }
 
-.lateral{
-    position: absolute;
-    right: 0px;
-}
-
-.lateral div{
+.side-section {
     width: 311px;
     height: 450px;
     background-color: white;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     text-align: center;
 }
 
-.lateral div div{
+.side-section div {
     padding-bottom: 90px;
-
 }
 
-.lateral div img{
+.side-section div img{
     width: 150px;
-    margin: auto;
 }
 
-.lateral div p{
-    margin: 10px 20px;
+.side-section div p{
+    margin: 10px 0px;
 }
 
-#texto-destaque{
+#side-maintext{
    font-size: 24px;
    font-weight: bold;
    color: #0A3871;
 }
 
-#button-limpar{
-    border-radius: 24px;
-    border: 1px solid;
+#erase-button{
     width: 50%;
-    padding: 8px;
     margin: auto;
-    margin-bottom: 10px;
-    background-color: #056287;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    background-color: #4A7DBD;
     font-size: 12px;
 }
 
@@ -116,6 +110,6 @@ footer{
     height: 2.5em;
     width: 100%;
     background-color: #0A3871;
-    position: absolute;
+    position: fixed;
     bottom: 0;
 }
