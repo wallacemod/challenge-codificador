@@ -1,0 +1,13 @@
+header{
+    background-color: black;
+    height: 20px;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: black;
+    height: 20px;
+}
