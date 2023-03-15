@@ -1,18 +1,16 @@
-.control-buttons button:hover{
-    font-size: 1.01em;
-    opacity: 0.9;
-   /* background-color: rgba(10, 56, 113, 0.9);*/
-    transition: 1s;
+.button{
+    transform: scale(0.99);
 }
 
-#button-limpar:hover{
-    font-size: 0.8em;
+.button:hover{
+    transform: scale(1.00);
     opacity: 0.9;
-   /* background-color: rgba(10, 56, 113, 0.9);*/
-    transition: 1s;
+    transition: 0.8s;
+    cursor: pointer;
 }
 
-body::after{
-    background-image: url(backgroundpt.png);
-    opacity: 0.5;
+li:hover{
+    transform: scale(1.1);
+    transition: 1s;
+    cursor: pointer;
 }

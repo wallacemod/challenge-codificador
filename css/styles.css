@@ -5,7 +5,7 @@ body{
 
 header{
     display: flex;
-    background-color: #0A3871;
+    background-color: #4A7DBD;
     height: 2.5em;
     width: 100%;
     position: fixed;
@@ -61,6 +61,7 @@ textarea{
 
 #encode{
     background-color: #355A88;
+    border-color: #061F3D;
     color: #FFFFFF
 }
 
@@ -102,14 +103,27 @@ textarea{
     margin: auto;
     margin-bottom: 5px;
     margin-top: 5px;
-    background-color: #4A7DBD;
+    background-color: #355A88;
     font-size: 12px;
 }
 
 footer{
-    height: 2.5em;
-    width: 100%;
-    background-color: #0A3871;
+    background-color: #4A7DBD;
     position: fixed;
     bottom: 0;
+    height: 2.5em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.socials-list{
+    display: flex;
+    gap: 1em;
+}
+
+.svg-button{
+    filter: invert(100%);
+}
+
