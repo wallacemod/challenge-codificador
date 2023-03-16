@@ -7,15 +7,20 @@ var i = 0;
 function carregarElementos(){
     var encodeButton = document.getElementById("encode");
     var decodeButton = document.getElementById("decode");
+    eraseButton = document.getElementById("erase-button");
+
     encodeButton.onclick = encode;
     decodeButton.onclick = decode;
-
-    eraseButton = document.getElementById("erase-button");
     eraseButton.onclick = erase;   
-    
+
     mainTextArea = document.getElementById("mainsection-textarea");
     historyTextArea = document.getElementById("side-textarea");
+
     historyEmptyMessage = document.getElementById("side-content");  
+
+    centralize = document.getElementById("centralize");
+    historySection = document.getElementById("side-section");
+    historyStoreMessage = historySection.cloneNode(historySection.firstElementChild);
 }
 
 function encode(){
@@ -52,13 +57,20 @@ function writeCryptType(cryptType){
     historyTextArea.value += (mainTextArea.value + " " + cryptType + "\n" );
 }
 
-function erase(){
-    historyTextArea.value = "";
-}
-
 function historyMessageEraser(){
     if(i == 0){
         historyEmptyMessage.parentNode.removeChild(historyEmptyMessage);
         i++;
     }
+}
+
+function erase(){
+    historySection.parentNode.removeChild(historySection);
+    historyMessageRewrite();
+}
+
+function historyMessageRewrite(){
+    centralize.appendChild(historyStoreMessage);
+    i = 0;
+    carregarElementos();
 }

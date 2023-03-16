@@ -8,7 +8,7 @@ Site feito como um desafio proposto pela Alura na jornada "ONE". Um codificador/
 ### As chaves de criptografia são:
 - A letra "e" é convertida para "enter".
 - A letra "i" é convertida para "imes".
-- Aletra "a" é convertida para "ai".
+- A letra "a" é convertida para "ai".
 - A letra "o" é convertida para "ober".
 - A letra "u" é convertida para "ufat".
 
@@ -30,6 +30,6 @@ Site feito como um desafio proposto pela Alura na jornada "ONE". Um codificador/
 ## 🚀 Atualizações planejadas: 
 
 - [X] Padronização de classes e id's
+- [X] Adição do aviso "Nenhuma mensagem encontrada" ao limpar
 - Adição de um background
-- Adição do aviso "Nenhuma mensagem encontrada" ao limpar
 - Responsividade
